@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f0f0f0;
+    height: 4.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4caf4f;
+}
+
+nav button {
+    background-color: #4caf4f;
+    border: none;
+    cursor: pointer;
+    border-radius: 2.7px;
+    height: 32px;
+    width: 130px;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #45a049;
+}
+
+nav button img {
+    width: 16px;
+    height: 16px;
+}
+
+.hero {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.left h1 span {
+    color: #4caf4f;
+}
+
+.left p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.left button {
+    background-color: #4caf4f;
+    border: none;
+    cursor: pointer;
+    border-radius: 2.7px;
+    height: 36px;
+    width: 140px;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.left button:hover {
+    background-color: #45a049;
+}
+
+.left button img {
+    width: 16px;
+    height: 16px;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services {
+    display: flex;
+    gap: 40px;
+    padding: 70px 0;
+}
+
+.ser-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ser-left h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.ser-left p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #4f4f4f;
+    line-height: 1.7;
+}
+
+.ser-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+    margin-bottom: 22px;
+    width: 60px;
+    height: 60px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4f4f4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    nav button {
+        width: 120px;
+        font-size: 16px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .left h1 {
+        font-size: 36px;
+    }
+
+    .left p {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .left button {
+        align-self: center;
+    }
+
+    .services {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .ser-left h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .ser-right {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .left h1 {
+        font-size: 28px;
+    }
+
+    .ser-left h2 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    nav button {
+        width: 100px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
